@@ -5,6 +5,7 @@ import com.lisz.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * localhost:8080/PROJECT/save
@@ -25,28 +26,28 @@ public class UserController {
 	@Autowired
 	private UserDao userDao;
 
-	@RequestMapping("/save")
+	@RequestMapping(value = "/user", method = RequestMethod.POST)
 	public String save() {
 		System.out.println(UserController.class.getName() + " save");
 		userDao.save(new User());
 		return "success";
 	}
 
-	@RequestMapping("/update")
+	@RequestMapping(value = "/user", method = RequestMethod.PUT)
 	public String update(Integer id) {
 		System.out.println(UserController.class.getName() + " update");
 		userDao.update(id);
 		return "success";
 	}
 
-	@RequestMapping("/delete")
+	@RequestMapping(value = "/user", method = RequestMethod.DELETE)
 	public String delete(Integer id) {
 		System.out.println(UserController.class.getName() + " delete");
 		userDao.delete(id);
 		return "success";
 	}
 
-	@RequestMapping("/query")
+	@RequestMapping(value = "/user", method = RequestMethod.GET)
 	public String query() {
 		System.out.println(UserController.class.getName() + " query");
 		userDao.query();
