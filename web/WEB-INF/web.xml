@@ -29,7 +29,9 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
     -->
-    <!-- SpringMVC提供的编码过滤器 -->
+    <!-- SpringMVC提供的编码过滤器. 启动tomcat之前要先确定在lib中导入了spring 和springmvc的包：
+     File -> Projecr Structure -> Artifact -> 在WEB-INF下面建立lib目 -> 然后cerate Library File ->
+     将所有的jar导入-->
     <filter>
         <filter-name>encoding</filter-name>
         <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
