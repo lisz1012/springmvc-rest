@@ -16,6 +16,16 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
+
+    <filter>
+        <filter-name>myFilter</filter-name>
+        <filter-class>com.lisz.filter.MyFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>myFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
     <!-- 将post请求转化为put或Delete -->
     <filter>
         <filter-name>hidden</filter-name>

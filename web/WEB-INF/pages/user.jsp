@@ -19,6 +19,9 @@
         姓名：<input name="name" type="text"> <br />
         年龄：<input name="age" type="text"> <br />
         性别：<input name="gender" type="text"> <br />
+        省份：<input name="address.province" type="text"> <br />
+        城市：<input name="address.city" type="text"> <br />
+        区县：<input name="address.town" type="text"> <br />
         <input type="submit" value="提交">
     </form>
 </body>
