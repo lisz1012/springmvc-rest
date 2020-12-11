@@ -11,6 +11,8 @@
     <title>Success</title>
 </head>
 <body>
-    Success
+    Success <br>
+    request:${requestScope.get("request")}<br>
+    session:${sessionScope.get("session")}
 </body>
 </html>
